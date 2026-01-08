@@ -5,7 +5,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "ArcadeGameGameModeBase.generated.h"
+#include "ArcadeGameModeBase.generated.h"
 
 UENUM(BlueprintType)
 enum class EGameState : uint8
@@ -17,12 +17,12 @@ enum class EGameState : uint8
 };
 
 UCLASS()
-class ARCADELABCODING_API AArcadeGameGameModeBase : public AGameModeBase
+class ARCADELABCODING_API AArcadeGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
 public:
-	AArcadeGameGameModeBase();
+	AArcadeGameModeBase();
 
 	virtual void StartGame();
 	virtual void EndGame();
@@ -32,7 +32,7 @@ public:
 
 protected:
 	UPROPERTY()
-	EGameState GameState;
+	EGameState ArcadeGameState;
 
 	UPROPERTY()
 	int32 Score;
